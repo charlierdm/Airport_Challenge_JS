@@ -1,7 +1,12 @@
 const Airport = require('./airport')
 const Plane = require('./plane')
+jest.mock('./plane');
 
 const airport = new Airport();
+
+beforeEach(() => {
+  Plane.mockClear();
+});
 
 test('the airport default capacity can be overridden as appropriate', () => {
   let newAirport = new Airport(capacity = 5);
@@ -9,8 +14,7 @@ test('the airport default capacity can be overridden as appropriate', () => {
 });
 
 test('the air traffic controller can instruct a plane to land at the airport', () => {
-  let plane = new Plane();
-  airport.landPlane(plane);
+  airport.landPlane(Plane);
   expect(airport.hanger.length).toEqual(1);
 })
 
