@@ -34,3 +34,27 @@ As an air traffic controller
 To ensure safety
 I want to prevent landing when weather is stormy
 ```
+
+## Install
+
+<em>Note - you must have node installed to run this project.</em>
+
+In your command line, enter the following commands:
+
+```
+$ npm init
+```
+
+```
+$ npm install --save-dev jest
+```
+
+add the following to your package.json
+
+```
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
