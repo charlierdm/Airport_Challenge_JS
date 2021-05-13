@@ -2,7 +2,7 @@
 
 This is my solution to the airport challenge from Makers Academy - written in JavaScript and test driven using Jest. The goal of this project is to improve upon my JavaScript based object orientated programming as well as my test driven development using a new testing framework - Jest.
 
-![plane](https://user-images.githubusercontent.com/75075773/118150506-8a6cf080-b40a-11eb-921f-7a58ae540700.jpeg)
+![es19blueclouds](https://user-images.githubusercontent.com/75075773/118150940-023b1b00-b40b-11eb-899b-96c43fd494d5.png)
 
 ## Task
 
