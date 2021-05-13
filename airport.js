@@ -5,6 +5,7 @@ class Airport {
   }
 
   landPlane(plane){
+    if(this.hanger.length === this.capacity) { return 'Airport is at full capacity' }
     this.hanger.push(plane);
     return 'The plane has been landed safely.';
   }

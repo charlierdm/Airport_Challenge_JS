@@ -15,10 +15,21 @@ test('the airport default capacity can be overridden as appropriate', () => {
 
 test('the air traffic controller can instruct a plane to land at the airport', () => {
   airport.landPlane(Plane);
-  expect(airport.hanger.length).toEqual(1);
+  expect(airport.hanger).toContain(Plane);
 })
 
 test('the air traffic controller can instruct a plane to take off and recieve confirmation', () => {
   expect(airport.takeOff()).toEqual(`The plane has taken off succesfully, there are 0 planes in the airport.`);
 })
+
+test('the airport will not accept planes landing if at maximum capacity', () => {
+  let newAirport = new Airport(capacity = 5)
+  for(let i = 0; i < newAirport.capacity; i++){
+    newAirport.landPlane(Plane)
+  }
+  expect(newAirport.hanger.length).toEqual(5)
+})
+
+
+
 
