@@ -2,6 +2,7 @@ const Airport = require('./airport')
 const Plane = require('./plane')
 jest.mock('./plane');
 
+
 const airport = new Airport();
 
 beforeEach(() => {
@@ -28,6 +29,11 @@ test('the airport will not accept planes landing if at maximum capacity', () => 
     newAirport.landPlane(Plane)
   }
   expect(newAirport.hanger.length).toEqual(5)
+})
+
+test('the plane is prevented from takeoff when the weather is stormy', () => {
+  airport.landPlane(Plane)
+  expect(airport.takeOff()).toEqual('The plane cannot leave the airport in poor weather conditions.')
 })
 
 

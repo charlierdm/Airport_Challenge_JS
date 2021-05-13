@@ -1,6 +1,6 @@
 class Weather {
   constructor(){
-    this.weather = ['sunny', 'sunny', 'rainy'];
+    this.weather = ['sunny', 'sunny', 'stormy'];
   }
 
   forecast(){
