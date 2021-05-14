@@ -1,6 +1,6 @@
 const Airport = require('./airport')
-const Plane = require('./plane')
-const Weather = require('./weather')
+const Plane = require('./plane');
+const Weather = require('./weather');
 jest.mock('./plane');
 jest.mock('./weather')
 
@@ -11,7 +11,7 @@ describe('Airport', () => {
   beforeEach(() => {
     airport = new Airport(weather = Weather);
     Plane.mockClear();
-    Weather.mockClear();
+    Weather.mockClear()
   });
 
   it('has a default capacity that can be overridden as appropriate', () => {
@@ -39,6 +39,7 @@ describe('Airport', () => {
   describe('Stormy weather conditions', () => {
 
     it('prevents takeoff when the weather is stormy', () => {
+      
       airport.landPlane(Plane)
       expect(airport.takeOff()).toEqual('The plane cannot leave the airport in poor weather conditions.')
     })

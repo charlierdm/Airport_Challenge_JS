@@ -37,7 +37,7 @@ I want to prevent landing when weather is stormy
 
 ## Code Example
 
-<img width="799" alt="Screenshot 2021-05-14 at 16 25 53" src="https://user-images.githubusercontent.com/75075773/118292955-11849c00-b4d1-11eb-961d-d115f9a68958.png">
+<img width="935" alt="Screenshot 2021-05-14 at 17 27 00" src="https://user-images.githubusercontent.com/75075773/118300224-9a9fd100-b4d9-11eb-8e5a-c80daa598aac.png">
 
 ## Install
 
@@ -68,4 +68,13 @@ To run the tests:
 
 ```
 $ npm test
+```
+
+To Operate:
+
+```
+const plane = new Plane();
+const airport = new Airport();
+airport.landPlane(plane);
+airport.takeOff();
 ```
