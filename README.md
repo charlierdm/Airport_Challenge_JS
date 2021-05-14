@@ -35,6 +35,10 @@ To ensure safety
 I want to prevent landing when weather is stormy
 ```
 
+## Code Example
+
+<img width="799" alt="Screenshot 2021-05-14 at 16 25 53" src="https://user-images.githubusercontent.com/75075773/118292955-11849c00-b4d1-11eb-961d-d115f9a68958.png">
+
 ## Install
 
 <em>Note - you must have node installed to run this project.</em>
@@ -57,4 +61,11 @@ add the following to your package.json
     "test": "jest"
   }
 }
+
+```
+
+To run the tests:
+
+```
+$ npm test
 ```
