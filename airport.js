@@ -9,9 +9,8 @@ class Airport {
 
   landPlane(plane){
     if(this.isPoorWeather()) { return 'The plane cannot land in poor weather conditions.' }
-    this.isFullCapacity()
     this.hanger.push(plane);
-    return 'The plane has been landed safely.';
+    return this.isFullCapacity()
   }
 
   takeOff(){
@@ -21,7 +20,11 @@ class Airport {
   }
 
   isFullCapacity(){
-    if(this.hanger.length === this.capacity) { return 'Airport is at full capacity' }
+    if(this.hanger.length === this.capacity) {
+      return 'Airport is at full capacity'
+    } else {
+      return 'The plane has been landed safely.';
+    }
   }
 
   isPoorWeather(){
