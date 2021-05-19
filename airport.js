@@ -20,15 +20,14 @@ class Airport {
   }
 
   isFullCapacity(){
-    if(this.hanger.length === this.capacity) {
-      return 'Airport is at full capacity'
-    } else {
-      return 'The plane has been landed safely.';
-    }
+    if(this.hanger.length > this.capacity) {
+      this.hanger.pop();
+      return 'Airport is at full capacity';
+    } else { return 'The plane has been landed safely.' };
   }
 
   isPoorWeather(){
-    return this.weather.forecast() === 'stormy'
+    return this.weather.forecast() === 'stormy';
   }
 
 }
